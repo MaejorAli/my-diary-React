@@ -1,4 +1,7 @@
+const { DefinePlugin } = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+require('dotenv').config();
+
 
 module.exports = {
   module: {
@@ -11,6 +14,21 @@ module.exports = {
         },
       },
       {
+        test: /\.(css|scss|sass)$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'sass-loader',
+          },
+        ],
+        enforce: 'pre',
+      },
+      {
         test: /\.html$/,
         use: [
           {
@@ -21,6 +39,11 @@ module.exports = {
     ],
   },
   plugins: [
+    new DefinePlugin({
+      'process.env': {
+        REACT_APP_API_URL: JSON.stringify(process.env.REACT_APP_API_URL),
+      },
+    }),
     new HtmlWebPackPlugin({
       template: './src/index.html',
       filename: './index.html',
