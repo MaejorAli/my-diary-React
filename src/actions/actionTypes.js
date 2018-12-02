@@ -1,0 +1,5 @@
+export const AUTH_USER_LOADING = 'AUTH_USER_LOADING';
+export const AUTH_USER_SUCCESS = 'AUTH_USER_SUCCESS';
+export const AUTH_USER_ERROR = 'AUTH_USER_ERROR';
+export const SET_USER = 'SET_USER';
+export const AUTH_SIGNOUT_USER = 'AUTH_SIGNOUT_USER';
