@@ -38,6 +38,9 @@ module.exports = {
       },
     ],
   },
+  devServer: {
+    historyApiFallback: true,
+  },
   plugins: [
     new DefinePlugin({
       'process.env': {

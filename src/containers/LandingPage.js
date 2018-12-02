@@ -30,6 +30,11 @@ export class LandingPage extends Component {
        email: email.trim(),
        password: password.trim(),
      };
+     if (!firstname) return swal('Please enter a first name', 'Enter your first name', 'warning');
+     if (!lastname) return swal('Please fill in your last name', 'Enter your last name', 'warning');
+     if (!email) return swal('Please fill in your email', 'Enter your email', 'warning');
+     if (!password) return swal('Please fill in your password', 'Enter your password', 'warning');
+     if (!confirmPassword) return swal('Please confirm your password', 'Confirm password', 'warning');
      if (confirmPassword !== password) {
        swal('Passwords do not Match!', 'Please check your password', 'warning');
      } else {
