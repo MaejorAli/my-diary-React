@@ -16,6 +16,15 @@ const initialState = {
 export class LandingPage extends Component {
  state = initialState;
 
+ componentDidUpdate(prevProps) {
+   const { signupUser, errorMessage } = this.props;
+   if (prevProps.signupUser !== signupUser && signupUser) {
+     swal('Good job!', 'Signed up Successfully!', 'success');
+   } else if (prevProps.errorMessage !== errorMessage && errorMessage) {
+     swal('Error!', 'Something Went Wrong!', 'error');
+   }
+ }
+
    handleSubmit = (event) => {
      event.preventDefault();
      const { signup: signupUser, history } = this.props;
@@ -88,6 +97,6 @@ export class LandingPage extends Component {
    }
 }
 
-const mapStateToProps = (state) => ({ signupUser: state.auth });
+const mapStateToProps = (state) => ({ signupUser: state.auth.authenticated, errorMessage: state.auth.errorMessage });
 
 export default connect(mapStateToProps, { signup })(LandingPage);

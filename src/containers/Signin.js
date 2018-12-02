@@ -14,6 +14,15 @@ const initialState = {
 export class Signin extends Component {
  state = initialState;
 
+ componentDidUpdate(prevProps) {
+   const { signupUser, errorMessage } = this.props;
+   if (prevProps.signupUser !== signupUser && signupUser) {
+     swal('Good job!', 'Signed up Successfully!', 'success');
+   } else if (prevProps.errorMessage !== errorMessage && errorMessage) {
+     swal('Error!', 'Something Went Wrong!', 'error');
+   }
+ }
+
    handleSubmit = (event) => {
      event.preventDefault();
      const { signin: signinUser, history } = this.props;
@@ -66,5 +75,5 @@ export class Signin extends Component {
    }
 }
 
-const mapStateToProps = (state) => ({ signinUser: state.auth });
+const mapStateToProps = (state) => ({ signupUser: state.auth.authenticated, errorMessage: state.auth.errorMessage });
 export default connect(mapStateToProps, { signin })(Signin);
