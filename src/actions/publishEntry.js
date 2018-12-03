@@ -1,18 +1,10 @@
 
-import axios from 'axios';
 import {
   PUBLISH_ENTRY_LOADING,
   PUBLISH_ENTRY_SUCCESS,
   PUBLISH_ENTRY_ERROR,
 } from './actionTypes';
 
-const authenticated = JSON.parse(localStorage.getItem('authenticated')) || {};
-// axios.defaults.baseURL = `${process.env.REACT_APP_API_URL}/api/v1`;
-// axios.defaults.headers.common['x-access-token'] = authenticated.token;
-const api = axios.create({
-  baseURL: `${process.env.REACT_APP_API_URL}/api/v1`,
-  headers: { 'x-access-token': authenticated.token },
-});
 const publishEntryLoading = () => (
   {
     type: PUBLISH_ENTRY_LOADING,
@@ -33,7 +25,7 @@ const publishEntrySuccess = (payload) => (
   }
 );
 
-const publishEntry = (entryPayload) => async (dispatch) => {
+const publishEntry = (entryPayload) => async (dispatch, getState, { api }) => {
   try {
     dispatch(publishEntryLoading());
     const request = await api.post('/entries', entryPayload);

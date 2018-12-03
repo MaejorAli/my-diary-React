@@ -1,4 +1,3 @@
-import axiosConfig from '../config/axiosConfig';
 import {
   AUTH_SIGNOUT_USER,
   AUTH_USER_SUCCESS,
@@ -6,22 +5,23 @@ import {
 } from './actionTypes';
 
 
-const persistAuth = (authenticated) => {
+const persistAuth = (authenticated, API) => {
   localStorage.setItem('authenticated', JSON.stringify(authenticated));
+  API.updateToken(authenticated.token);
 };
 
-export const signup = (formValues) => async (dispatch) => {
+export const signup = (formValues) => async (dispatch, getState, API) => {
   try {
-    const response = await axiosConfig.api.post('/auth/signup', formValues);
+    const response = await API.api.post('/auth/signup', formValues);
 
     // Store important details in local storage
-    const { token, data } = response;
-    persistAuth(token, data);
+    const { data } = response;
+    persistAuth(data, API);
 
     // Then dispatch response
     dispatch({
       type: AUTH_USER_SUCCESS,
-      payload: response.data,
+      payload: data,
     });
   } catch (error) {
     dispatch({
@@ -31,17 +31,17 @@ export const signup = (formValues) => async (dispatch) => {
   }
 };
 
-export const signin = (formValues) => async (dispatch) => {
+export const signin = (formValues) => async (dispatch, getState, API) => {
   try {
-    const response = await axiosConfig.api.post('/auth/login', formValues);
+    const response = await API.api.post('/auth/login', formValues);
     // Store important details in local storage
     const { data } = response;
-    persistAuth(data);
+    persistAuth(data, API);
 
     // Then dispatch response
     dispatch({
       type: AUTH_USER_SUCCESS,
-      payload: response.data,
+      payload: data,
     });
   } catch (error) {
     dispatch({

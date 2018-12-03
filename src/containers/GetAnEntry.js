@@ -57,9 +57,9 @@ export class GetAnEntry extends Component {
       <div className="get-entry-body">
         <header>
           <div id="menu">
-            <Link to="/" className="menuitem">Home</Link>
-            <Link to="/" className="menuitem">Profile</Link>
-            <Link to="/" className="menuitem">New Entry</Link>
+            <Link to="/dashboard" className="menuitem">Home</Link>
+            <Link to="/profile" className="menuitem">Profile</Link>
+            <Link to="/entries/create" className="menuitem">New Entry</Link>
             <Link to="/" className="menuitem">Sign Out</Link>
 
           </div>
@@ -79,12 +79,6 @@ export class GetAnEntry extends Component {
         </section>
         <button type="button" id="modifyButton" onClick={() => history.push(`/entries/update/${entry.id}`)}>Modify</button> <button type="button" id="deleteButton" onClick={this.deleteEntry}>Delete</button>
 
-
-        <footer>
-          <div className="container">
-         &copy; My Diary 2018
-          </div>
-        </footer>
       </div>
     );
   }

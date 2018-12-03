@@ -5,6 +5,8 @@ import publishEntryReducer from './publishEntryReducer';
 import updateEntryReducer from './updateEntryReducer';
 import entryReducer from './entryReducer';
 import deleteEntryReducer from './deleteEntryReducer';
+import profileReducer from './profileReducer';
+import updateProfileImageReducer from './updateProfileImageReducers';
 
 
 export default combineReducers({
@@ -13,4 +15,6 @@ export default combineReducers({
   updateEntryReducer,
   entries: entryReducer,
   deleteEntryReducer,
+  profileReducer,
+  updateProfileImageReducer,
 });
