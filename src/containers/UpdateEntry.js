@@ -17,9 +17,10 @@ export class UpdateEntry extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    const { status, entry } = this.props;
+    const { status, entry, history } = this.props;
     if (prevProps.status.success !== status.success && status.success) {
       swal('Good job!', 'Entry Saved Successfully!', 'success');
+      setTimeout(() => history.push('/entries'), 3000);
     } else if (prevProps.status.error !== status.error && status.error) {
       swal('Error!', 'Something Went Wrong!', 'error');
     }

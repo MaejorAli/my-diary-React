@@ -7,6 +7,7 @@ import PublishEntry from './PublishEntry';
 import UpdateEntry from './UpdateEntry';
 import GetAnEntry from './GetAnEntry';
 import GetEntries from './GetEntries';
+import Dashboard from '../views/Dashboard';
 
 const App = () => (
   <BrowserRouter>
@@ -17,6 +18,7 @@ const App = () => (
       <Route exact path="/entries/update/:entryId" component={UpdateEntry} />
       <Route exact path="/entries/:entryId" component={GetAnEntry} />
       <Route exact path="/entries" component={GetEntries} />
+      <Route exact path="/dashboard" component={Dashboard} />
     </div>
   </BrowserRouter>
 );
