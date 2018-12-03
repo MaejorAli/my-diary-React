@@ -1,4 +1,3 @@
-import axios from 'axios';
 import {
   GET_ENTRY_SUCCESS,
   GET_ENTRY_ERROR,
@@ -7,20 +6,12 @@ import {
   GET_ENTRIES_ERROR,
 } from './actionTypes';
 
-const authenticated = JSON.parse(localStorage.getItem('authenticated')) || {};
-// axios.defaults.baseURL = `${process.env.REACT_APP_API_URL}/api/v1`;
-// axios.defaults.headers.common['x-access-token'] = authenticated.token;
-const api = axios.create({
-  baseURL: `${process.env.REACT_APP_API_URL}/api/v1`,
-  headers: { 'x-access-token': authenticated.token },
-});
-
 const entryLoading = (status = true) => ({
   type: ENTRY_LOADING,
   payload: status,
 });
 
-export const getEntries = () => async (dispatch) => {
+export const getEntries = () => async (dispatch, getState, { api }) => {
   try {
     const response = await api.get('/entries/');
     dispatch({
@@ -35,7 +26,7 @@ export const getEntries = () => async (dispatch) => {
   }
 };
 
-export const getAnEntry = (entryId) => async (dispatch) => {
+export const getAnEntry = (entryId) => async (dispatch, getState, { api }) => {
   dispatch(entryLoading());
   try {
     const response = await api.get(`/entries/${entryId}`);

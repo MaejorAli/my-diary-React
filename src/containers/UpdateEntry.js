@@ -56,9 +56,9 @@ export class UpdateEntry extends Component {
       <div className="entry-body">
         <header>
           <div id="menu">
-            <Link to="/" className="menuitem">Home</Link>
-            <Link to="/" className="menuitem">Entries</Link>
-            <Link to="/" className="menuitem">Profile</Link>
+            <Link to="/dashboard" className="menuitem">Home</Link>
+            <Link to="/entries" className="menuitem">Entries</Link>
+            <Link to="/profile" className="menuitem">Profile</Link>
             <Link to="/" className="menuitem"> Sign Out</Link>
           </div>
         </header>

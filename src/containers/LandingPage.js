@@ -64,7 +64,7 @@ export class LandingPage extends Component {
            <div id="menu">
              <Link to="/" className="menuitem">Home</Link>
              <Link to="/" className="menuitem">Contact Us</Link>
-             <Link to="/" className="menuitem">Sign In</Link>
+             <Link to="/auth/signin" className="menuitem">Sign In</Link>
            </div>
          </header>
          <section>

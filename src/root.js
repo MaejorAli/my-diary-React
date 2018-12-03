@@ -14,7 +14,7 @@ const state = {
     ownProfile: JSON.parse(localStorage.getItem('ownProfile')),
   },
 };
-const API = AxiosConfig.updateToken(state.auth.authenticated);
+const API = new AxiosConfig(state.auth.authenticated.token);
 
 export default ({ children, initialState = { ...state } }) => {
   const store = createStore(
