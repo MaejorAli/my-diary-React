@@ -6,8 +6,8 @@ import {
 } from './actionTypes';
 
 
-const persistAuth = (token) => {
-  localStorage.setItem('token', token);
+const persistAuth = (authenticated) => {
+  localStorage.setItem('authenticated', JSON.stringify(authenticated));
 };
 
 export const signup = (formValues) => async (dispatch) => {
@@ -35,8 +35,8 @@ export const signin = (formValues) => async (dispatch) => {
   try {
     const response = await axiosConfig.api.post('/auth/login', formValues);
     // Store important details in local storage
-    const { tokenize, data } = response;
-    persistAuth(tokenize, data);
+    const { data } = response;
+    persistAuth(data);
 
     // Then dispatch response
     dispatch({

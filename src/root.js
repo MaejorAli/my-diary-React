@@ -9,7 +9,7 @@ import AxiosConfig from './config/axiosConfig';
 const enhancers = composeWithDevTools({});
 const state = {
   auth: {
-    authenticated: localStorage.getItem('token'),
+    authenticated: JSON.parse(localStorage.getItem('authenticated')) || {},
     user: JSON.parse(localStorage.getItem('user')),
     ownProfile: JSON.parse(localStorage.getItem('ownProfile')),
   },
