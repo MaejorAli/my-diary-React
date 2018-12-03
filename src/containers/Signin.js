@@ -46,7 +46,7 @@ export class Signin extends Component {
            <div id="menu">
              <Link to="/" className="menuitem">Home</Link>
              <Link to="/" className="menuitem">Contact Us</Link>
-             <Link to="/" className="menuitem">Sign Out</Link>
+             <Link to="/signout" className="menuitem">Sign Out</Link>
            </div>
          </header>
 

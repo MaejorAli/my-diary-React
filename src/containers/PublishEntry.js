@@ -51,7 +51,7 @@ export class PublishEntry extends Component {
             <Link to="/dashboard" className="menuitem">Home</Link>
             <Link to="/entries" className="menuitem">Entries</Link>
             <Link to="/profile" className="menuitem">Profile</Link>
-            <Link to="/" className="menuitem"> Sign Out</Link>
+            <Link to="/signout" className="menuitem"> Sign Out</Link>
           </div>
         </header>
 

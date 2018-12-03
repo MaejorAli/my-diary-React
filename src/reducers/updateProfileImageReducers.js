@@ -24,7 +24,6 @@ const updateProfileImageReducer = (state = initialState, action) => {
       };
 
     case UPDATE_PROFILEIMAGE_SUCCESS:
-      {console.log(action.payload);
       return {
         ...state,
         updatedImage: action.payload,
@@ -32,7 +31,7 @@ const updateProfileImageReducer = (state = initialState, action) => {
           success: true,
           error: false,
         },
-      };}
+      };
 
     case UPDATE_PROFILEIMAGE_ERROR: {
       return {
