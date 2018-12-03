@@ -60,7 +60,7 @@ export class GetAnEntry extends Component {
             <Link to="/dashboard" className="menuitem">Home</Link>
             <Link to="/profile" className="menuitem">Profile</Link>
             <Link to="/entries/create" className="menuitem">New Entry</Link>
-            <Link to="/" className="menuitem">Sign Out</Link>
+            <Link to="/signout" className="menuitem">Sign Out</Link>
 
           </div>
         </header>

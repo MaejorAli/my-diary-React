@@ -9,6 +9,7 @@ import GetAnEntry from './GetAnEntry';
 import GetEntries from './GetEntries';
 import Dashboard from '../views/Dashboard';
 import Profile from './Profile';
+import SignOut from './Signout';
 
 const App = () => (
   <BrowserRouter>
@@ -22,6 +23,7 @@ const App = () => (
         <Route exact path="/entries" component={GetEntries} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/profile" component={Profile} />
+        <Route exact path="/signout" component={SignOut} />
       </Switch>
     </div>
   </BrowserRouter>
