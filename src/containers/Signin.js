@@ -15,9 +15,10 @@ export class Signin extends Component {
  state = initialState;
 
  componentDidUpdate(prevProps) {
-   const { signupUser, errorMessage } = this.props;
+   const { signupUser, errorMessage, history } = this.props;
    if (prevProps.signupUser !== signupUser && signupUser) {
      swal('Good job!', 'Signed up Successfully!', 'success');
+     setTimeout(() => history.push('/dashboard'), 3000);
    } else if (prevProps.errorMessage !== errorMessage && errorMessage) {
      swal('Error!', 'Something Went Wrong!', 'error');
    }

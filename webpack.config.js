@@ -29,6 +29,14 @@ module.exports = {
         enforce: 'pre',
       },
       {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
+      {
         test: /\.html$/,
         use: [
           {
