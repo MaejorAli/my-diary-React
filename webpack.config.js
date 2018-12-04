@@ -1,11 +1,21 @@
 const { DefinePlugin } = require('webpack');
+const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 require('dotenv').config();
 
 
 module.exports = {
+  entry: ['babel-polyfill', './src/index.js'],
   module: {
     rules: [
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+          },
+        ],
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -33,21 +43,24 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-          },
-        ],
-      },
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader',
+            options: {
+              name: './src/assets/[name].[ext]',
+              limit: 10000,
+            },
           },
         ],
       },
     ],
   },
+  output: {
+    path: path.join(__dirname, 'build'),
+    filename: 'index.bundle.js',
+    publicPath: '/',
+  },
   devServer: {
     historyApiFallback: true,
+    contentBase: './',
+    hot: true,
   },
   plugins: [
     new DefinePlugin({

@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sign in container render features view should render as expected 1`] = `
+<div
+  className="signin-body"
+>
+  <header>
+    <div
+      id="menu"
+    >
+      <Link
+        className="menuitem"
+        replace={false}
+        to="/"
+      >
+        Home
+      </Link>
+      <Link
+        className="menuitem"
+        replace={false}
+        to="/"
+      >
+        Contact Us
+      </Link>
+      <Link
+        className="menuitem"
+        replace={false}
+        to="/signout"
+      >
+        Sign Out
+      </Link>
+    </div>
+  </header>
+  <div>
+    <div
+      className="card card-container"
+    >
+      <p
+        className="profile-name-card"
+        id="profile-name"
+      >
+        Welcome To My Diary
+      </p>
+      <form
+        className="form-signin"
+        onSubmit={[Function]}
+      >
+        <span
+          className="reauth-email"
+          id="reauth-email"
+        />
+        <input
+          className="form-control"
+          id="email"
+          onChange={[Function]}
+          placeholder="Email address"
+          required={true}
+          type="email"
+          value=""
+        />
+        <input
+          className="form-control"
+          id="password"
+          onChange={[Function]}
+          placeholder="Password"
+          required={true}
+          type="password"
+          value=""
+        />
+        <div
+          className="checkbox"
+          id="remember"
+        >
+          <label>
+            <input
+              type="checkbox"
+              value="remember-me"
+            />
+             Remember me
+          </label>
+        </div>
+        <button
+          className="btn btn-lg btn-primary btn-block btn-signin"
+          id="enter-signin"
+          type="button"
+        >
+          Sign in
+        </button>
+      </form>
+      <div
+        id="errors"
+      />
+    </div>
+  </div>
+</div>
+`;

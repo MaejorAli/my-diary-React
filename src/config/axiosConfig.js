@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = `${process.env.REACT_APP_API_URL}/api/v1`;
+const baseURL = 'https://secure-shelf-65268.herokuapp.com/api/v1';
 export default class API {
   constructor(token) {
     this.updateToken(token);

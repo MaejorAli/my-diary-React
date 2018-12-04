@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Update Entry container render features view should render as expected 1`] = `
+<_default>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <MemoryRouter
+      initialEntries={
+        Array [
+          Object {
+            "key": "test",
+          },
+        ]
+      }
+    >
+      <Router
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "canGo": [Function],
+            "createHref": [Function],
+            "entries": Array [
+              Object {
+                "hash": "",
+                "key": "test",
+                "pathname": "/",
+                "search": "",
+              },
+            ],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "index": 0,
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "key": "test",
+              "pathname": "/",
+              "search": "",
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+      >
+        <Connect(UpdateEntry)
+          error={true}
+          getAnEntry={[MockFunction]}
+          history={
+            Object {
+              "push": [MockFunction],
+            }
+          }
+          match={
+            Object {
+              "params": Object {
+                "id": 1,
+              },
+            }
+          }
+          publishEntry={[MockFunction]}
+          publishedEnty=""
+          signin={[MockFunction]}
+          signupUser={[MockFunction]}
+          status={
+            Object {
+              "success": true,
+            }
+          }
+          updateEntry={[MockFunction]}
+        >
+          <UpdateEntry
+            entry={Object {}}
+            entryLoading={true}
+            error={true}
+            getAnEntry={[Function]}
+            history={
+              Object {
+                "push": [MockFunction],
+              }
+            }
+            match={
+              Object {
+                "params": Object {
+                  "id": 1,
+                },
+              }
+            }
+            publishEntry={[MockFunction]}
+            publishedEnty=""
+            signin={[MockFunction]}
+            signupUser={[MockFunction]}
+            status={
+              Object {
+                "error": false,
+                "success": false,
+              }
+            }
+            updateEntry={[Function]}
+            updatedEntry={Object {}}
+          >
+            <div
+              className="error"
+            >
+              <span>
+                <Component />
+              </span>
+            </div>
+          </UpdateEntry>
+        </Connect(UpdateEntry)>
+      </Router>
+    </MemoryRouter>
+  </Provider>
+</_default>
+`;

@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile container render features view should render as expected 1`] = `
+<div
+  className="landing-page-body"
+>
+  <header>
+    <div
+      id="menu"
+    >
+      <Link
+        className="menuitem"
+        replace={false}
+        to="/"
+      >
+        Home
+      </Link>
+      <Link
+        className="menuitem"
+        replace={false}
+        to="/"
+      >
+        Contact Us
+      </Link>
+      <Link
+        className="menuitem"
+        replace={false}
+        to="/auth/signin"
+      >
+        Sign In
+      </Link>
+    </div>
+  </header>
+  <section>
+    <div
+      className="content"
+    >
+      <h1>
+        Welcome to My Diary
+      </h1>
+      <p>
+        Simple, classy journal just for you
+      </p>
+    </div>
+    <article>
+      <div
+        className="card card-container"
+      >
+        <p
+          className="profile-name-card"
+          id="profile-name"
+        />
+        <form
+          className="form-signin"
+          onSubmit={[Function]}
+        >
+          <span
+            className="reauth-email"
+            id="reauth-email"
+          />
+          <input
+            className="form form-control"
+            id="firstname"
+            onChange={[Function]}
+            placeholder="First name"
+            required={true}
+            type="firstname"
+            value=""
+          />
+          <input
+            className="form form-control"
+            id="lastname"
+            onChange={[Function]}
+            placeholder="Last name"
+            required={true}
+            type="firstname"
+            value=""
+          />
+          <input
+            className="form-control"
+            id="email"
+            onChange={[Function]}
+            placeholder="Email address"
+            required={true}
+            type="email"
+            value=""
+          />
+          <input
+            className="form-control"
+            id="password"
+            onChange={[Function]}
+            placeholder="Password"
+            required={true}
+            type="password"
+            value=""
+          />
+          <input
+            className="form-control"
+            id="confirm-password"
+            onChange={[Function]}
+            placeholder="Confirm Password"
+            required={true}
+            type="password"
+            value=""
+          />
+          <button
+            className="btn btn-lg btn-primary btn-block btn-signin"
+            id="enter-signup"
+            onClick={[Function]}
+            type="submit"
+          >
+            Sign Up
+          </button>
+          <Link
+            className="forgot-password"
+            replace={false}
+            to="/auth/signin"
+          >
+            Already Registered?
+          </Link>
+        </form>
+        <div
+          id="errors"
+        />
+      </div>
+    </article>
+  </section>
+</div>
+`;
