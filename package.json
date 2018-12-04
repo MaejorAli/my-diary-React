@@ -4,6 +4,7 @@
   "description": "my Diary frontend apllication",
   "main": "index.js",
   "scripts": {
+    "start": "npm run build",
     "build": " node server/app.js",
     "start:dev": "webpack-dev-server --mode development --open --hot",
     "prebuild": "webpack --mode production",
