@@ -1,0 +1,316 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile container render features view should render as expected 1`] = `
+<div
+  className="profile-body"
+>
+  <header>
+    <div
+      id="menu"
+    >
+      <Link
+        className="menuitem"
+        replace={false}
+        to="/dashboard"
+      >
+        Home
+      </Link>
+      <Link
+        className="menuitem"
+        replace={false}
+        to="/entries"
+      >
+        Entries
+      </Link>
+      <Link
+        className="menuitem"
+        replace={false}
+        to="/entries/create"
+      >
+        New Entry
+      </Link>
+      <Link
+        className="menuitem"
+        replace={false}
+        to="/signout"
+      >
+        Sign Out
+      </Link>
+    </div>
+  </header>
+  <div
+    className="user-profile"
+  >
+    <img
+      alt="Ali"
+      className="avatar"
+      id="image"
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=="
+    />
+    <div
+      className="username"
+      id="username"
+    >
+       
+    </div>
+    <div
+      className="email"
+      id="email"
+    />
+    <h4>
+      Published Stories 
+      <span
+        id="entryCount"
+      />
+      4
+    </h4>
+  </div>
+  <section>
+    <div
+      className="part"
+    >
+      <div
+        className="image-upload"
+      >
+        <label
+          htmlFor="file-input"
+        >
+          <h5>
+            Change Profile Picture
+          </h5>
+        </label>
+        <input
+          id="file-input"
+          onChange={[Function]}
+          type="file"
+        />
+      </div>
+    </div>
+    <div
+      id="errors"
+    />
+    <article>
+      <h1>
+        My Top Stories
+      </h1>
+      <div
+        className="entry"
+      >
+        <EntryList
+          GetEntries={[MockFunction]}
+          PublishEntry={[MockFunction]}
+          deleteEntry={[MockFunction]}
+          deleteEntryReducer={[MockFunction]}
+          entries={
+            Array [
+              Object {
+                "id": 1,
+              },
+              Object {
+                "id": 2,
+              },
+              Object {
+                "id": 3,
+              },
+              Object {
+                "id": 4,
+              },
+            ]
+          }
+          entry={Object {}}
+          entryLoading=""
+          getAllEntries={
+            [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            }
+          }
+          getUserProfile={
+            [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            }
+          }
+          gottenProfile={Object {}}
+          history={
+            Object {
+              "push": [MockFunction],
+            }
+          }
+          id={1}
+          key="1"
+          match={
+            Object {
+              "params": Object {
+                "id": 1,
+              },
+            }
+          }
+          signin={[MockFunction]}
+          signupUser={[MockFunction]}
+          status="true"
+          statuss="true"
+          updateImage={[MockFunction]}
+          updatedImage="true"
+        />
+        <EntryList
+          GetEntries={[MockFunction]}
+          PublishEntry={[MockFunction]}
+          deleteEntry={[MockFunction]}
+          deleteEntryReducer={[MockFunction]}
+          entries={
+            Array [
+              Object {
+                "id": 1,
+              },
+              Object {
+                "id": 2,
+              },
+              Object {
+                "id": 3,
+              },
+              Object {
+                "id": 4,
+              },
+            ]
+          }
+          entry={Object {}}
+          entryLoading=""
+          getAllEntries={
+            [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            }
+          }
+          getUserProfile={
+            [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            }
+          }
+          gottenProfile={Object {}}
+          history={
+            Object {
+              "push": [MockFunction],
+            }
+          }
+          id={2}
+          key="2"
+          match={
+            Object {
+              "params": Object {
+                "id": 1,
+              },
+            }
+          }
+          signin={[MockFunction]}
+          signupUser={[MockFunction]}
+          status="true"
+          statuss="true"
+          updateImage={[MockFunction]}
+          updatedImage="true"
+        />
+        <EntryList
+          GetEntries={[MockFunction]}
+          PublishEntry={[MockFunction]}
+          deleteEntry={[MockFunction]}
+          deleteEntryReducer={[MockFunction]}
+          entries={
+            Array [
+              Object {
+                "id": 1,
+              },
+              Object {
+                "id": 2,
+              },
+              Object {
+                "id": 3,
+              },
+              Object {
+                "id": 4,
+              },
+            ]
+          }
+          entry={Object {}}
+          entryLoading=""
+          getAllEntries={
+            [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            }
+          }
+          getUserProfile={
+            [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            }
+          }
+          gottenProfile={Object {}}
+          history={
+            Object {
+              "push": [MockFunction],
+            }
+          }
+          id={3}
+          key="3"
+          match={
+            Object {
+              "params": Object {
+                "id": 1,
+              },
+            }
+          }
+          signin={[MockFunction]}
+          signupUser={[MockFunction]}
+          status="true"
+          statuss="true"
+          updateImage={[MockFunction]}
+          updatedImage="true"
+        />
+      </div>
+    </article>
+  </section>
+</div>
+`;

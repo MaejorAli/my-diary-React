@@ -1,0 +1,9 @@
+{
+  "createEntryInitialState": {
+    "publishedEntry": {},
+    "status": {
+      "error": false,
+      "success": true
+    }
+  }
+}

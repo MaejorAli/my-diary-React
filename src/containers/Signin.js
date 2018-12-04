@@ -55,7 +55,7 @@ export class Signin extends Component {
 
            <div className="card card-container">
              <p id="profile-name" className="profile-name-card">Welcome To My Diary</p>
-             <form className="form-signin">
+             <form onSubmit={this.handleSubmit} className="form-signin">
                <span id="reauth-email" className="reauth-email" />
                <input type="email" value={email} id="email" className="form-control" placeholder="Email address" onChange={(e) => handleChange(e.target.value, 'email')} required />
                <input type="password" value={password} id="password" className="form-control" placeholder="Password" onChange={(e) => handleChange(e.target.value, 'password')} required />

@@ -1,5 +1,5 @@
 import React from 'react';
-import SignOut from '../containers/SignOut';
+import SignOut from '../containers/Signout';
 
 
 export default (props) => (

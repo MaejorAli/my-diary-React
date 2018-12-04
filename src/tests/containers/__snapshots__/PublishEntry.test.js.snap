@@ -1,0 +1,207 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Publish Entry container render features view should render as expected 1`] = `
+<_default>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <MemoryRouter
+      initialEntries={
+        Array [
+          Object {
+            "key": "test",
+          },
+        ]
+      }
+    >
+      <Router
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "canGo": [Function],
+            "createHref": [Function],
+            "entries": Array [
+              Object {
+                "hash": "",
+                "key": "test",
+                "pathname": "/",
+                "search": "",
+              },
+            ],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "index": 0,
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "key": "test",
+              "pathname": "/",
+              "search": "",
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+      >
+        <Connect(PublishEntry)
+          error={true}
+          history={
+            Object {
+              "push": [MockFunction],
+            }
+          }
+          publishEntry={[MockFunction]}
+          publishedEnty=""
+          signin={[MockFunction]}
+          signupUser={[MockFunction]}
+          status={
+            Object {
+              "success": true,
+            }
+          }
+        >
+          <PublishEntry
+            history={
+              Object {
+                "push": [MockFunction],
+              }
+            }
+            publishEntry={[Function]}
+            publishedEntry={Object {}}
+            publishedEnty=""
+            signin={[MockFunction]}
+            signupUser={[MockFunction]}
+            status={
+              Object {
+                "error": false,
+                "success": false,
+              }
+            }
+          >
+            <div
+              className="entry-body"
+            >
+              <header>
+                <div
+                  id="menu"
+                >
+                  <Link
+                    className="menuitem"
+                    replace={false}
+                    to="/dashboard"
+                  >
+                    <a
+                      className="menuitem"
+                      href="/dashboard"
+                      onClick={[Function]}
+                    >
+                      Home
+                    </a>
+                  </Link>
+                  <Link
+                    className="menuitem"
+                    replace={false}
+                    to="/entries"
+                  >
+                    <a
+                      className="menuitem"
+                      href="/entries"
+                      onClick={[Function]}
+                    >
+                      Entries
+                    </a>
+                  </Link>
+                  <Link
+                    className="menuitem"
+                    replace={false}
+                    to="/profile"
+                  >
+                    <a
+                      className="menuitem"
+                      href="/profile"
+                      onClick={[Function]}
+                    >
+                      Profile
+                    </a>
+                  </Link>
+                  <Link
+                    className="menuitem"
+                    replace={false}
+                    to="/signout"
+                  >
+                    <a
+                      className="menuitem"
+                      href="/signout"
+                      onClick={[Function]}
+                    >
+                       Sign Out
+                    </a>
+                  </Link>
+                </div>
+              </header>
+              <section>
+                <div
+                  className="date"
+                >
+                  <h5
+                    id="date"
+                  >
+                    Tue Dec 04 2018
+                  </h5>
+                </div>
+                <article>
+                  <form>
+                    <div
+                      id="errors"
+                    />
+                    <input
+                      className="form form-control"
+                      id="title"
+                      onChange={[Function]}
+                      placeholder="Title"
+                      type="title"
+                      value=""
+                    />
+                    <textarea
+                      id="content"
+                      name="message"
+                      onChange={[Function]}
+                      placeholder="Write your story..."
+                      value=""
+                    />
+                    <button
+                      id="publishEntry"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      Publish
+                    </button>
+                  </form>
+                </article>
+              </section>
+              <footer>
+                <div
+                  className="container"
+                >
+                  © My Diary 2018
+                </div>
+              </footer>
+            </div>
+          </PublishEntry>
+        </Connect(PublishEntry)>
+      </Router>
+    </MemoryRouter>
+  </Provider>
+</_default>
+`;

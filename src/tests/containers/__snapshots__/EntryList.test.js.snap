@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Get An Entry container render features view should render as expected 1`] = `
+<Fragment>
+  <div
+    className="entry-description"
+    id="entries"
+  >
+    <ul>
+      <li>
+        <h2 />
+      </li>
+      <li>
+        <p>
+          undefined NaN, NaN
+        </p>
+      </li>
+      <li>
+        <button
+          id="entries"
+          onClick={[Function]}
+          type="button"
+        >
+          Read More
+        </button>
+      </li>
+    </ul>
+  </div>
+</Fragment>
+`;

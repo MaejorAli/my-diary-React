@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './containers/App';
 import 'babel-polyfill';
+import App from './containers/App';
 import Root from './root';
 
 // const Index = () => <div>Hello React!</div>;

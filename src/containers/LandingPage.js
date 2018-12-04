@@ -77,7 +77,7 @@ export class LandingPage extends Component {
            <article>
              <div className="card card-container">
                <p id="profile-name" className="profile-name-card" />
-               <form className="form-signin">
+               <form onSubmit={this.handleSubmit} className="form-signin">
                  <span id="reauth-email" className="reauth-email" />
                  <input type="firstname" value={firstname} id="firstname" className="form form-control" placeholder="First name" onChange={(e) => handleChange(e.target.value, 'firstname')} required />
                  <input type="firstname" value={lastname} id="lastname" className="form form-control" placeholder="Last name" onChange={(e) => handleChange(e.target.value, 'lastname')} required />
@@ -85,7 +85,7 @@ export class LandingPage extends Component {
                  <input type="password" id="password" value={password} className="form-control" placeholder="Password" onChange={(e) => handleChange(e.target.value, 'password')} required />
                  <input type="password" id="confirm-password" value={confirmPassword} className="form-control" placeholder="Confirm Password" onChange={(e) => handleChange(e.target.value, 'confirmPassword')} required />
                  <button className="btn btn-lg btn-primary btn-block btn-signin" type="submit" id="enter-signup" onClick={this.handleSubmit}>Sign Up</button>
-                 <Link to="/" className="forgot-password">
+                 <Link to="/auth/signin" className="forgot-password">
                   Already Registered?
                  </Link>
                </form>
