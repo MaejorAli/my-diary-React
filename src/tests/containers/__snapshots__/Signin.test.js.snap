@@ -82,6 +82,7 @@ exports[`Sign in container render features view should render as expected 1`] = 
         <button
           className="btn btn-lg btn-primary btn-block btn-signin"
           id="enter-signin"
+          onClick={[Function]}
           type="button"
         >
           Sign in
