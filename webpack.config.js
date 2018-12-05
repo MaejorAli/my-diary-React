@@ -59,7 +59,7 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: './',
+    contentBase: '/',
     hot: true,
   },
   plugins: [
